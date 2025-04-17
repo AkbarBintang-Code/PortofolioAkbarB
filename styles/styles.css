@@ -127,7 +127,15 @@ a {
 .nav {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 0;
+  align-items: center;
+  padding: 2rem 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  background: transparent;
 }
 
 nav ul {
@@ -192,6 +200,7 @@ nav ul li a {
 
 /* Hero Section */
 #hero {
+  padding-top: 10rem;
   height: 720px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -222,14 +231,6 @@ nav ul li a {
 #services {
   background-color: var(--secondaryBackgroundColor);
   padding: var(--sectionPadding);
-}
-
-.services .pre-title {
-  margin: 0 auto;
-}
-
-.services-title {
-  text-align: center;
 }
 
 .service {
