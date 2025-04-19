@@ -23,9 +23,10 @@ const navSlide = () => {
     new TypeIt(".paragrap", {
       speed : 150
     })
-    .delete(16)
-    .type('UI UX Designer')
-    .type(' and Web Programming.')
+    .pause(1000)
+    .delete(63)
+    .type('Im Bachelor of Information Systems graduate from Dinamika University Surabaya')
+    .type(' Interested in designing intuitive interfaces and building interactive and responsive websites.')
     .go();
   });
   
