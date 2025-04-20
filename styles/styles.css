@@ -567,7 +567,7 @@ nav ul li a {
 /* Footer Section */
 footer {
   padding: 4rem 0;
-  background: var(--secondaryBackgroundColor);
+  background: var(--primaryBackgroundColor);
   text-align: center;
 }
 
@@ -580,9 +580,9 @@ footer {
 }
 
 .footer-icons svg {
-  fill: #3e3f40;
+  fill: #000;
 }
 
 .footer-icons a:hover svg {
-  fill: #000;
+  fill: #aa5b00;
 }
