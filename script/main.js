@@ -29,4 +29,29 @@ const navSlide = () => {
     .type(' Interested in designing intuitive interfaces and building interactive and responsive websites.')
     .go();
   });
-  
+
+  const sr = ScrollReveal({
+    distance: '80px',
+    duration: 2500,
+    delay: 200,
+    reset: true,
+  });
+
+  sr.reveal('.main-container .hero-left', { origin: 'left' });
+  sr.reveal('.main-container .hero-right', { origin: 'right' });
+  sr.reveal('#services .pre-title', { origin: 'top' });
+  sr.reveal('#services .services-title', { origin: 'top' });
+  sr.reveal('#services .service', { origin: 'bottom', interval: 200 });
+  sr.reveal('#portfolios .pre-title', { origin: 'top' ,interval: 200 });
+  sr.reveal('#portfolios .section-title', { origin: 'top' ,interval: 200 });
+  sr.reveal('#portfolios .portfolio', { origin: 'bottom', interval: 200 });
+  sr.reveal('#portfolios-2 .portfolio', { origin: 'bottom', interval: 200 });
+  sr.reveal('#skills .pre-title', { origin: 'top' });
+  sr.reveal('#skills .section-title', { origin: 'top' });
+  sr.reveal('#skills .skills-left .education', { origin: 'left', interval: 200 });
+  sr.reveal('#skills .skills-right', { origin: 'right', delay: 400 });
+  sr.reveal('#skills .skills-list ul li', { origin: 'bottom', interval: 100 });
+  sr.reveal('#certificates .pre-title', { origin: 'top' });
+  sr.reveal('#certificates .section-title', { origin: 'top' });
+  sr.reveal('#certificates .certificate', { origin: 'bottom', interval: 200 });
+
