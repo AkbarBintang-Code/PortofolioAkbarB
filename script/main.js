@@ -59,27 +59,27 @@ const navSlide = () => {
   sr.reveal('#contact .contact-item', { origin: 'bottom', interval: 200 });
   sr.reveal('#contact .btn-submit', { origin: 'bottom', delay: 600 });
 
-  const blobs = document.querySelectorAll('.blob');
+  // const blobs = document.querySelectorAll('.blob');
 
-  function moveBlob(blob) {
-    // Tentukan batas layar agar blob bergerak di sekitar tepi layar
-    const maxX = window.innerWidth - blob.offsetWidth;
-    const maxY = window.innerHeight - blob.offsetHeight;
+  // function moveBlob(blob) {
+  //   // Tentukan batas layar agar blob bergerak di sekitar tepi layar
+  //   const maxX = window.innerWidth - blob.offsetWidth;
+  //   const maxY = window.innerHeight - blob.offsetHeight;
 
-    // Gerakkan secara acak ke posisi baru dalam batas layar
-    const x = Math.random() * maxX;
-    const y = Math.random() * maxY;
+  //   // Gerakkan secara acak ke posisi baru dalam batas layar
+  //   const x = Math.random() * maxX;
+  //   const y = Math.random() * maxY;
 
-    blob.style.transform = `translate(${x}px, ${y}px)`;
-  }
+  //   blob.style.transform = `translate(${x}px, ${y}px)`;
+  // }
 
-  function animateBlobs() {
-    blobs.forEach(blob => moveBlob(blob));
-  }
+  // function animateBlobs() {
+  //   blobs.forEach(blob => moveBlob(blob));
+  // }
 
-  // Animasi pertama kali
-  animateBlobs();
+  // // Animasi pertama kali
+  // animateBlobs();
 
-  // Ulangi animasi tiap 2 detik
-  setInterval(animateBlobs, 2000);
+  // // Ulangi animasi tiap 2 detik
+  // setInterval(animateBlobs, 2000);
 
