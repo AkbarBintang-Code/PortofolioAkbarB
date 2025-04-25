@@ -609,4 +609,6 @@ footer {
 
 .footer-icons a:hover svg {
   fill: #aa5b00;
+  transition: color 0.4s, transform 0.5s;
+  transform: translateY(-5px);
 }
