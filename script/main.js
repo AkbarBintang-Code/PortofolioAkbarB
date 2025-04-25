@@ -21,7 +21,8 @@ const navSlide = () => {
 
   document.addEventListener("DOMContentLoaded", function () {
     new TypeIt(".paragrap", {
-      speed : 150
+      speed : 150,
+      loop:"true"
     })
     .pause(1000)
     .delete(63)
