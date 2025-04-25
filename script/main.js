@@ -54,4 +54,9 @@ const navSlide = () => {
   sr.reveal('#certificates .pre-title', { origin: 'top' });
   sr.reveal('#certificates .section-title', { origin: 'top' });
   sr.reveal('#certificates .certificate', { origin: 'bottom', interval: 200 });
+  sr.reveal('#contact .contact-left', { origin: 'left', delay: 200 });
+  sr.reveal('#contact .contact-right', { origin: 'right', delay: 400 });
+  sr.reveal('#contact .contact-item', { origin: 'bottom', interval: 200 });
+  sr.reveal('#contact .btn-submit', { origin: 'bottom', delay: 600 });
+
 
