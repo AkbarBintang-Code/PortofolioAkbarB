@@ -26,8 +26,24 @@ const navSlide = () => {
     })
     .pause(1000)
     .delete(63)
-    .type('Im Bachelor of Information Systems graduate from Dinamika University Surabaya')
-    .type(' Interested in designing intuitive interfaces and building interactive and responsive websites.')
+    .type('UI/UX Designer')  
+    .pause(1000)
+    .delete(14)  
+    .type('Web Developer')  
+    .pause(1000)
+    .delete(13) 
+    .type('Front End Developer') 
+    .pause(1000)
+    .delete(19)
+    .type('Magician') 
+    .pause(1000)
+    .delete(8)
+    .type('Haha')
+    .pause(1000)
+    .delete(4)
+    .type('Im Joking.')
+    .pause(1000)
+    .delete(10)
     .go();
   });
 
@@ -47,6 +63,7 @@ const navSlide = () => {
   sr.reveal('#portfolios .section-title', { origin: 'top' ,interval: 200 });
   sr.reveal('#portfolios .portfolio', { origin: 'bottom', interval: 200 });
   sr.reveal('#portfolios-2 .portfolio', { origin: 'bottom', interval: 200 });
+  
   sr.reveal('#skills .pre-title', { origin: 'top' });
   sr.reveal('#skills .section-title', { origin: 'top' });
   sr.reveal('#skills .skills-left .education', { origin: 'left', interval: 200 });

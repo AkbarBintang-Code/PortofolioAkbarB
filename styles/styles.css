@@ -43,7 +43,7 @@ strong {
 }
 
 p {
-  font-size: 1rem; /* 16 px */
+  font-size: 18px; /* 16 px */
   line-height: 1.9rem; /*30.4 px */
 }
 
@@ -332,6 +332,10 @@ nav ul li a {
 
 /* Portfolios */
 #portfolios {
+  padding: var(--sectionPadding);
+}
+
+#portfolios-2 {
   padding: var(--sectionPadding);
 }
 
