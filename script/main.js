@@ -36,21 +36,47 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Dynamic Rotating Text for Hero Section
+   document.addEventListener("DOMContentLoaded", function() {
+    // Other existing JavaScript code here...
+
     if (document.querySelector('.dynamic-text')) {
         new TypeIt(".dynamic-text", {
-            strings: ["intuitive designs", "responsive websites", "engaging experiences", "functional applications"], ["intuitive designs", "responsive websites", "engaging experiences", "functional applications"],
-            speed: 100,
-            deleteSpeed: 50,
+            strings: ["intuitive designs", "responsive websites", "engaging experiences", "functional applications"],
+            speed: 150, // Meningkatkan kecepatan pengetikan (nilai lebih tinggi = lebih cepat)
+            deleteSpeed: 150, // Meningkatkan kecepatan penghapusan (nilai lebih tinggi = lebih cepat)
             breakLines: false,
             loop: true,
-            nextStringDelay: 750,
-            afterString: function (step, instance) {
-                // To ensure a smooth loop without abrupt jumps
-                if (instance.options.loop && step.index === instance.options.strings.length - 1) {
-                    instance.type('', { delay: 1000 }).go(); // Add a short delay before looping
-                }
-            }
+            nextStringDelay: 300, // Mengurangi jeda antar string
+            // Fungsi afterString dihapus untuk memanfaatkan default looping TypeIt
         }).go();
+    }
+
+    // Other existing JavaScript code here...
+});
+
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+    if (scrollTopBtn) { // Pastikan tombol ditemukan di DOM
+        window.addEventListener('scroll', function() {
+            // Tampilkan tombol jika scroll lebih dari 200px dari atas
+            if (window.pageYOffset > 200) {
+                scrollTopBtn.style.display = 'flex'; // Gunakan 'flex' karena kita ingin center ikon
+                scrollTopBtn.style.opacity = '1';
+            } else {
+                scrollTopBtn.style.opacity = '0';
+                // Set display to 'none' after transition to ensure it doesn't block clicks
+                setTimeout(() => {
+                    scrollTopBtn.style.display = 'none';
+                }, 300); // Match transition duration
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Membuat scroll menjadi halus
+            });
+        });
     }
 
 

@@ -420,7 +420,7 @@ header {
 
 .portfolio-title h4 {
     font-size: 1.4rem;
-    color: var(--primary-color);
+    color: #b9d6f9;
 }
 
 .portfolio-link svg {
@@ -606,7 +606,7 @@ header {
 
 .certificate-title h4 {
     font-size: 1.2rem;
-    color: var(--primary-color);
+    color: #b9d6f9;
     line-height: 1.4;
 }
 
@@ -723,7 +723,7 @@ header {
 
 .contact-item-detail h4 {
     font-size: 1.2rem;
-    color: var(--primary-color);
+    color: #a1cbff;
     margin-bottom: 5px;
 }
 
@@ -764,6 +764,40 @@ footer p {
     font-size: 0.9rem;
     color: var(--text-color-dark);
     opacity: 0.7;
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+    display: none; /* Sembunyikan secara default */
+    position: fixed; /* Tetap di layar */
+    bottom: 30px; /* Jarak dari bawah */
+    right: 30px; /* Jarak dari kanan */
+    z-index: 999; /* Pastikan di atas elemen lain */
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    border: none;
+    border-radius: 50%; /* Bentuk lingkaran */
+    width: 50px; /* Lebar tombol */
+    height: 50px; /* Tinggi tombol */
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Hapus padding default button */
+}
+
+#scrollTopBtn:hover {
+    background-color: #4a8deb; /* Warna hover */
+    transform: translateY(-3px); /* Efek sedikit naik */
+}
+
+#scrollTopBtn svg {
+    fill: var(--dark-bg); /* Warna ikon SVG */
+    width: 24px;
+    height: 24px;
 }
 
 /* Responsive adjustments will go in responsive.css */
