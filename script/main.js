@@ -143,3 +143,9 @@ const scrollTopBtn = document.getElementById('scrollTopBtn');
         easing: 'ease-in-out'
     });
 });
+
+window.onbeforeunload = () => {
+  for (const form of document.getElementsByTagName("form")) {
+    form.reset();
+  }
+};
