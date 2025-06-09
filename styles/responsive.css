@@ -19,6 +19,14 @@
     .skills-grid {
         grid-template-columns: 1fr;
     }
+    /* Tambahkan aturan ini untuk kartu-kartu yang juga berada di grid-3 */
+    .service-card,
+    .portfolio-card,
+    .certificate-card {
+        max-width: 450px; /* Atur lebar maksimum kartu, sesuaikan nilai ini */
+        margin-left: auto;   /* Pusatkan kartu secara horizontal */
+        margin-right: auto;  /* Pusatkan kartu secara horizontal */
+    }
 }
 
 @media (max-width: 768px) {
@@ -37,12 +45,21 @@
     #navbar {
         display: none; /* Hide by default for mobile */
         flex-direction:column;
-        width: 35rem;
+        /* PERHATIAN: 'width: 35rem;' ini sangat besar untuk sebagian besar layar HP. */
+        /* Jika ini adalah menu hamburger, pertimbangkan untuk mengubahnya menjadi 'width: 100%;' atau 'max-width: 300px;' */
+        /* Ini bisa menjadi penyebab utama tampilan 'aneh' jika memicu scrollbar horizontal. */
+        width: 100%; /* Ubah ini untuk memastikan tidak ada overflow */
+        max-width: 400px; /* Atau batasi lebar menu hamburger agar tidak terlalu besar */
         gap: 15px;
         background-color: var(--card-bg);
         padding: 20px 0;
         border-radius: 8px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        position: absolute; /* Pastikan posisi relatif terhadap parent yang tepat */
+        top: 60px; /* Sesuaikan posisi agar di bawah logo/burger */
+        left: 50%;
+        transform: translateX(-50%); /* Pusatkan secara horizontal */
+        z-index: 9999;
     }
 
     #navbar.active {
@@ -114,12 +131,25 @@
     }
 
     .btn {
-      margin-left: 27px;
+        /* PERHATIAN: 'margin-left: 27px;' ini mungkin menyebabkan tombol tidak terpusat dengan baik */
+        /* Ubah menjadi 'margin: 0 auto;' jika Anda ingin tombol terpusat di tengah container */
+        margin: 0 auto; /* Pusatkan tombol jika menggunakan flex-direction: column */
         width: 90%;
     }
 
     .grid-3 {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Pastikan kartu bertumpuk */
+        /* gap: 30px; (ini dari styles.css, akan tetap berfungsi untuk jarak vertikal) */
+    }
+
+    /* PENTING: Aturan ini membuat kartu lebih ramping dan terpusat */
+    .service-card,
+    .portfolio-card,
+    .certificate-card {
+        max-width: 400px; /* Lebar maksimum kartu, sesuaikan nilai ini */
+        margin-left: auto;   /* Pusatkan kartu secara horizontal */
+        margin-right: auto;  /* Pusatkan kartu secara horizontal */
+        /* Padding internal kartu tetap dari styles.css (30px) */
     }
 
     .section-title {
@@ -169,6 +199,14 @@
 
     .section-title {
         font-size: 1.5rem;
+    }
+
+    /* Sesuaikan lebar dan padding untuk layar yang lebih kecil lagi */
+    .service-card,
+    .portfolio-card,
+    .certificate-card {
+        max-width: 500px; /* Lebih ramping untuk layar sangat kecil */
+        padding: 20px; /* Kurangi padding internal untuk lebih banyak ruang konten */
     }
 
     .service-card h4 {
